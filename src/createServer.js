@@ -41,6 +41,7 @@ const createServer = () => {
 
     if (errors.errors.length) {
       res.statusCode = 400;
+      res.statusMessage = 'Bad request';
 
       res.end(JSON.stringify(errors));
     } else {
